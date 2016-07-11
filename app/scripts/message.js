@@ -1,15 +1,27 @@
 import $ from 'jquery';
+import session from './session.js';
 import User from './user.js';
+import allUsers from './entry.js';
 
-function allMessages() {
-  activeUser.messages.forEach(messageRender);
-}
+let messagesFunctions = {
 
-function messageRender(message, i, messages) {
-  $('.chat-page').append(message);
-  $('.chat-page').append(message.sender);
-  $('.chat-page').append(message.timestamp);
-}
+  allMessages: function functionName() {
+    allUsers.forEach(messagesFunctions.userMessages);
+  },
+
+  userMessages: function () {
+    $('.chat-page').empty();
+    session.activeUser.messages.forEach(messagesFunctions.messageRender);
+  },
+
+  messageRender : function (message, i, messages) {
+    $('.chat-page').append(message);
+    $('.chat-page').append(message.sender);
+    $('.chat-page').append(message.timestamp);
+  }
+};
+
+
 
 User.prototype.newMessage = function(message) {
   var chat = {};
@@ -29,3 +41,6 @@ User.prototype.newMessage = function(message) {
   this.messages.push(chat);
   messageRender(chat, (this.messages.length-1), this.messages);
 };
+
+
+export default messagesFunctions;

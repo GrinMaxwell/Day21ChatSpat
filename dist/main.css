@@ -8,7 +8,33 @@ header h1 {
   color: #d6ebf2;
   font-size: 6rem;
   text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e; }
-header h4 {
-  color: #b20000; }
+
+h4 {
+  color: #b20000;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+  font-family: 'Rock Salt', sans-serif; }
+
+.login {
+  text-align: center; }
+  .login input {
+    margin: 0 auto; }
+
+.chat-page {
+  text-align: center; }
+  .chat-page .message-container {
+    width: 80%;
+    float: right; }
+  .chat-page .messages p {
+    text-align: left; }
+  .chat-page .users {
+    float: right;
+    width: 15%;
+    background-color: #2a2a2a;
+    border-radius: 1rem;
+    border: 0.5rem solid #797979; }
+    .chat-page .users h3 {
+      color: #d6ebf2; }
 
 /*# sourceMappingURL=main.css.map */

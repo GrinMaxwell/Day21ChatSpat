@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import allUsers from './entry.js';
+
 
 function User (username) {
   this.username = username;
@@ -6,11 +8,6 @@ function User (username) {
   this.messages = [];
 }
 
-User.prototype.login = function(username) {
-  var attempt;
-  $.ajax({
-    
-  });
-};
+
 
 export default User;

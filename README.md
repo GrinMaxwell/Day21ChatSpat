@@ -2,7 +2,7 @@
 
 
 ## Notes
-
+- Jess, the instructor, gave us another day on this one and took out the constructor requirement, but since I've got mine almost all built I figure I'll leave them in. She also added a router requirement.
 
 ## Build order
 1. Get the scaffold all set up and working
@@ -23,4 +23,4 @@
   - a `session.js` that handles all logins, logouts, etc. including making a new user when their login doesn't match known users
   - a `message.js` that handles all the different message render functions (single message, one user's messages, and all the messages) and the method to add new messages to a user
 7. getting them all to speak to one another properly was a little difficult. I had to import something from each one into almost every other one (including a key variable from `entry.js`), but it's working well so far
-8.
+8. Ended up in the re-shuffle losing my `message.js` file because everything in it fit better in the `router.js` (which is basically all my views right now, since they're simple/small enough it seems silly to make them each their own module)
